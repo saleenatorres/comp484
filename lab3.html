@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CSUN Map Quiz</title>
+    <meta name="viewport" content="initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <script src="script.js" async></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1tZhIdI9Caj_uNAlHNxfEhdWoYubJtw0&callback=initMap"
+      async
+      defer
+    ></script>
+	  <style>
+	  .map-container {
+    	height: 800px;
+    	width: 500px;
+    	min-width: 500px;
+    	min-height: 500px;
+    	margin: auto;
+    	border: 1px solid #AAAAAA;
+	}
+#map {
+  height: 100%;
+}
+/* Optional: Makes the sample page fill the window. */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+button,
+input,
+select {
+  font-family: "Source Sans Pro", "Helvetica", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 140%;
+}
+
+blockquote {
+  margin: 0 1.5em;
+}
+
+h1 {
+    font-size: 24px;
+	text-align: center;
+}
+		  
+		  h2 {
+			  font-size: 20px;
+			  text-align: center;
+		  }
+		  
+		  h3 {
+			  font-size: 18px;
+			  text-align: center;
+		  }
+
+.content {
+    padding: 2em;
+    height: auto;
+    width: auto;
+}
+
+.questions {
+    text-align: center;
+}
+
+#q1,
+#q2,
+#q3,
+#q4,
+#q5{
+  display: none;
+}
+
+.timer {
+  padding-top: 5px;
+  font-size: 35px;
+}
+	  </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="question-wrapper">
+        <div class="instructions">
+		<h1>CSUN Map Quiz</h1>
+          <h2>Locate the following CSUN building on the map by double clicking:</h2>
+        </div>
+        <div class="questions">
+          <h3 id="q1" class="jacaranda">Jacaranda Hall</h3>
+          <h4 id="a1"></h4>
+
+          <h3 id="q2" class="usu">University Student Union</h3>
+          <h4 id="a2"></h4>
+
+          <h3 id="q3" class="manzanita">Manzanita Hall</h3>
+          <h4 id="a3"></h4>
+
+          <h3 id="q4" class="chaparral">Chaparral Hall</h3>
+          <h4 id="a4"></h4>
+
+          <h3 id="q5" class="sierra">Sierra Center</h3>
+          <h4 id="a5"></h4>
+        </div>
+        <div id="score"></div>
+ 
+      </div>
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
+    </div>
+  </body>
+</html>
